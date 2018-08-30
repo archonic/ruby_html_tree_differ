@@ -2,7 +2,8 @@ class RubyHtmlTreeDiffer
   require 'pycall/import'
   include PyCall::Import
 
-  def initialize
+  def initialize(cmd = 'python3')
+    PyCall.init(cmd)
     pyimport :htmltreediff
   end
 
