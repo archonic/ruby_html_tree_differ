@@ -9,10 +9,14 @@ You have to have python installed. You can set the python command (`python` or `
 ### Install
 
 Gemfile:
-`gem "ruby_html_tree_differ"`
+```
+gem "ruby_html_tree_differ"
+```
 
-or:
-`gem install ruby_html_tree_differ`
+Or:
+```
+gem install ruby_html_tree_differ
+```
 
 ### Example
 
@@ -33,7 +37,9 @@ new_doc = <<EOF
 EOF
 
 print differ.diff! old_doc, new_doc
-=>
+```
+
+```html
 <p>Unchanged paragraph.</p>
 <p>
   <del>Altered</del>
