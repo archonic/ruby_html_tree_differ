@@ -3,7 +3,7 @@ class RubyHtmlTreeDiffer
   include PyCall::Import
 
   def initialize
-    PyCall.sys.path.append File.expand_path(File.join(File.dirname(__FILE__), '..'))
+    # PyCall.sys.path.append File.expand_path(File.join(File.dirname(__FILE__), '..'))
     pyimport :htmltreediff
   end
 
