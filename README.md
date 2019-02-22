@@ -4,7 +4,7 @@ Shows the difference between two HTML documents, rendered to HTML. Relies on the
 
 ### Prerequisites
 
-You have to have python installed. You can set the python command (`python` or `python3`) with the ENV variable `PYTHON`. By default pycall checks for python3, then python. If your `RUBY_PLATFORM` is `x86_x64_linux` you should set the ENV variable `LIBPYTHON` to the output of `which python` or `which python3`. For me it was `/usr/bin/python3`. Check pycall's [finder.rb](https://github.com/mrkn/pycall.rb/blob/master/lib/pycall/libpython/finder.rb) if you have trouble.
+You must have python installed. You can set the python command (`python` or `python3`) with the ENV variable `PYTHON`. By default pycall checks for `python3`, then `python`. If your `RUBY_PLATFORM` is `x86_x64_linux` you should set the ENV variable `LIBPYTHON` to the output of `which python` or `which python3`. For me it was `/usr/bin/python3`. Check pycall's [finder.rb](https://github.com/mrkn/pycall.rb/blob/master/lib/pycall/libpython/finder.rb) if you have trouble.
 
 ### Install
 
@@ -50,3 +50,5 @@ print differ.diff! old_doc, new_doc
   <p>Deleted paragraph.</p>
 </del>
 ```
+
+Check test/test.rb for 2 benchmarks. Very long documents take a long time to process. If you are using this in a web application, you will want to calculate the diff in a background job and cache the result.
