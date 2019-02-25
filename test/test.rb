@@ -1,7 +1,7 @@
 require 'ruby_html_tree_differ'
 require 'benchmark'
 
-ENV['PYTHON'] = '/usr/local/bin/pypy2/bin/pypy'
+# ENV['PYTHON'] = '/usr/local/bin/pypy2/bin/pypy'
 # ENV['LIBPYTHON'] = '/usr/local/bin/pypy2/bin/pypy'
 
 print 'PYTHON ENV:'
