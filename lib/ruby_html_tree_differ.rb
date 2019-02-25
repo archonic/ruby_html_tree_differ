@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RubyHtmlTreeDiffer
   require 'pycall/import'
   include PyCall::Import
@@ -7,6 +9,8 @@ class RubyHtmlTreeDiffer
   end
 
   def diff!(old_document, new_document)
-    htmltreediff.diff(old_document, new_document, pretty: true)
+    difference_document = htmltreediff.diff(old_document, new_document, pretty: true)
+    PyCall::PyPtr.decref(difference_document.__pyptr__)
+    difference_document
   end
 end
