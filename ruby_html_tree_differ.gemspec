@@ -11,5 +11,5 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 2.3.0'
 
-  s.add_dependency("pycall", "<= 1.0.3")
+  s.add_dependency("pycall", ">= 1.2.1")
 end
